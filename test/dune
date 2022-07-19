@@ -1,0 +1,9 @@
+(test
+ (name tests)
+ (libraries
+  ; external
+  core
+  qcheck
+  qcheck-alcotest
+  ; internal
+  algorithms_theory_machines))

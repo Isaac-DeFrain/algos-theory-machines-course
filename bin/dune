@@ -1,0 +1,4 @@
+(executable
+ (public_name algorithms_theory_machines)
+ (name main)
+ (libraries algorithms_theory_machines))
