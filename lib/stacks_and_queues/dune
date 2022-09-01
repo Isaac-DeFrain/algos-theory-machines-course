@@ -1,0 +1,8 @@
+(library
+ (name stacks_and_queues)
+ (libraries base)
+ (inline_tests)
+ (preprocess
+  (pps ppx_jane bisect_ppx --conditional))
+ (lint
+  (pps ppx_jane -styler -pretty)))
