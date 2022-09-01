@@ -13,8 +13,9 @@ let write_file ~path sorted_data =
 
 let read_and_clean ~path =
   let data = read_file ~path in
-  if not @@ List.is_sorted_strictly data ~compare:String.compare then (
-    let sorted_data = List.dedup_and_sort data ~compare:String.compare in
+  let compare = String.compare in
+  if not @@ List.is_sorted_strictly data ~compare then (
+    let sorted_data = List.dedup_and_sort data ~compare in
     write_file ~path sorted_data;
     sorted_data)
   else data
